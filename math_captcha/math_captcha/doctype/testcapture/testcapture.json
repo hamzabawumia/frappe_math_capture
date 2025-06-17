@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-04 15:41:42.329397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "age",
+  "math_question",
+  "math_answer",
+  "math_captcha"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "math_question",
+   "fieldtype": "Data",
+   "label": "Math_Question"
+  },
+  {
+   "fieldname": "math_answer",
+   "fieldtype": "Data",
+   "label": "Math Answer"
+  },
+  {
+   "fieldname": "math_captcha",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Math Captcha"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-04 15:47:27.795096",
+ "modified_by": "Administrator",
+ "module": "Math Captcha",
+ "name": "TestCapture",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
