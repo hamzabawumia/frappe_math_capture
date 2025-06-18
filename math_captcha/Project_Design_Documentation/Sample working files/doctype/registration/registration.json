@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-08 23:02:57.870376",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "i_am_a_",
+  "email",
+  "first_name",
+  "last_name",
+  "phone_number",
+  "password",
+  "confirm_password",
+  "math_question",
+  "math_answer",
+  "math_captcha"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Password",
+   "label": "Confirm Password"
+  },
+  {
+   "fieldname": "math_question",
+   "fieldtype": "Data",
+   "label": "Math_Question"
+  },
+  {
+   "fieldname": "math_answer",
+   "fieldtype": "Data",
+   "label": "Math Answer"
+  },
+  {
+   "fieldname": "math_captcha",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Math Captcha"
+  },
+  {
+   "fieldname": "i_am_a_",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "I am a ...",
+   "options": "Doctor\nNurse\nPatient",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-09 00:19:37.642934",
+ "modified_by": "Administrator",
+ "module": "Africahomecare",
+ "name": "registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
