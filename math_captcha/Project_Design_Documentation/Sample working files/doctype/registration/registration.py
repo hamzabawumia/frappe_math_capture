@@ -37,6 +37,22 @@ class registration(MathCaptchaMixin):
         if not selected_role:
             frappe.throw("Invalid role selection.")
 
+
+# since we are using a Password field in the repherod_registration doctype,
+# Frappe automatically hashes the value stored in a Password field before saving to the database.
+#
+# So when you do:
+#
+# "new_password": self.password
+# You are actually assigning a hashed password to new_password,
+# and Frappe hashes it again, which breaks the login.
+#
+# To prevent the above issue, you need to decrypt the password first.
+
+        # 🔐 Get decrypted password from the field
+        plain_password = self.get_password("password")
+
+
         # Create the user
         user = frappe.get_doc({
             "doctype": "User",
@@ -46,7 +62,7 @@ class registration(MathCaptchaMixin):
             "phone": self.phone_number,
             "send_welcome_email": 1,
             "enabled": 1,
-            "new_password": self.password,  # Optional: only if you want to set it directly
+            "new_password": plain_password,  # Optional: only if you want to set it directly
             "roles": [{"role": selected_role}]  # ✅ Assign role during creation
         })
 
